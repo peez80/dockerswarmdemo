@@ -8,7 +8,6 @@ node1:
 
     docker swarm init --listen-addr 192.168.33.111:2377
 
-    docker network create --driver overlay app
 
 
 
@@ -40,6 +39,13 @@ node5:
          --ca-hash sha256:THE_HASH \
          --listen-addr 192.168.33.115:2377 \
          192.168.33.111:2377
+
+
+Network
+
+      docker network create --driver overlay app
+
+
 
 
 Services
